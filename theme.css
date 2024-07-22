@@ -1,43 +1,58 @@
-@import url('https://fonts.googleapis.com/css?family=Inter');
+/**
+ * @name midnight (biscuit) - Steampunk Edition
+ * @description A dark, steampunk-themed discord theme. Based on Biscuit theme (https://github.com/Biscuit-Colorscheme/biscuit).
+ * @author refact0r, anubis
+ * @version 1.6.2
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/midnight-discord
+ * @source https://github.com/refact0r/midnight-discord/blob/master/flavors/midnight-biscuit.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+/* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
+
+@import url('https://refact0r.github.io/midnight-discord/midnight.css');
 
 /* customize things here */
 :root {
-	/* font, change to 'gg sans' for default discord font */
+	/* font, change to 'gg sans' for default discord font*/
 	--font: 'Inter';
+
+	/* color of status indicators and window controls */
+	--online-indicator: #d0d694; /* steampunk light gold */
+	--dnd-indicator: #cf223e; /* deep red */
+	--idle-indicator: #e39c45; /* bronze */
+	--streaming-indicator: #614f76; /* dark purple */
 
 	/* top left corner text */
 	--corner-text: 'SlimeCrew';
 
-	/* color of status indicators and window controls */
-	--online-indicator: #89b481; /* change to #23a55a for default green */
-	--dnd-indicator: #d3869b; /* change to #f13f43 for default red */
-	--idle-indicator: #d8a656; /* change to #f0b232 for default yellow */
-
 	/* accent colors */
-	--accent-1: #7caea3; /* links */
-	--accent-2: #9b6b53; /* general unread/mention elements */
-	--accent-3: #9b6b53; /* accent buttons */
-	--accent-4: #a77a5c; /* accent buttons when hovered */
-	--accent-5: #8a5f4a; /* accent buttons when clicked */
-	--mention: rgba(155, 107, 83, 0.1); /* mentions & mention messages */
-	--mention-hover: rgba(155, 107, 83, 0.05); /* mentions & mention messages when hovered */
+	--accent-1: hsl(30, 40%, 50%); /* copper */
+	--accent-2: hsl(30, 40%, 45%); /* dark copper */
+	--accent-3: hsl(30, 40%, 40%); /* brass */
+	--accent-4: hsl(30, 40%, 35%); /* darker brass */
+	--accent-5: hsl(30, 40%, 30%); /* deep bronze */
+	--mention: hsla(30, 40%, 35%, 0.1); /* mentions & mention messages */
+	--mention-hover: hsla(30, 40%, 35%, 0.05); /* mentions & mention messages when hovered */
 
 	/* text colors */
-	--text-0: var(--bg-4); /* text on colored elements */
-	--text-1: var(--text-2); /* other normally white text */
-	--text-2: #dcdcdc; /* headings and important text */
-	--text-3: #c0c0c0; /* normal text */
-	--text-4: #a9a9a9; /* icon buttons and channels */
-	--text-5: #d4be9866; /* muted channels/chats and timestamps */
+	--text-0: var(--text-2); /* text on colored elements */
+	--text-1: hsl(24, 31%, 80%); /* other normally white text */
+	--text-2: hsl(30, 100%, 89%); /* headings and important text */
+	--text-3: hsl(24, 31%, 80%); /* normal text */
+	--text-4: hsl(0, 12%, 66%); /* icon buttons and channels */
+	--text-5: hsl(0, 12%, 56%); /* muted channels/chats and timestamps */
 
 	/* background and dark colors */
-	--bg-1: #5e503f; /* dark buttons when clicked */
-	--bg-2: #4e4133; /* dark buttons */
-	--bg-3: #3e3329; /* spacing, secondary elements */
-	--bg-4: #2c2825; /* main background color */
-	--hover: rgba(160, 130, 120, 0.1); /* channels and buttons when hovered */
-	--active: rgba(160, 130, 120, 0.2); /* channels and buttons when clicked or selected */
-	--message-hover: rgba(44, 40, 37, 0.1); /* messages when hovered */
+	--bg-1: hsl(30, 20%, 30%); /* dark bronze */
+	--bg-2: hsl(30, 20%, 20%); /* deep copper */
+	--bg-3: hsl(30, 15%, 15%); /* dark metal */
+	--bg-4: hsl(30, 10%, 10%); /* main background color */
+	--hover: hsla(30, 20%, 20%, 0.1); /* channels and buttons when hovered */
+	--active: hsla(30, 20%, 20%, 0.2); /* channels and buttons when clicked or selected */
+	--message-hover: hsla(30, 10%, 10%, 0.1); /* messages when hovered */
 
 	/* amount of spacing and padding */
 	--spacing: 12px;
@@ -59,10 +74,10 @@
 
 	/* direct messages moon icon */
 	/* change to block to show, none to hide */
-	--discord-icon: url("https://www.fantasianetwork.xyz/uploads/logos/669d7b53d3b9f1.72628476_jilhmfgqnpeok.png");/* discord icon */
-	--moon-icon: url("https://www.fantasianetwork.xyz/uploads/logos/669d7b53d3b9f1.72628476_jilhmfgqnpeok.png");
-	--moon-icon-url: url("https://www.fantasianetwork.xyz/uploads/logos/669d7b53d3b9f1.72628476_jilhmfgqnpeok.png");
-	--moon-icon-size: cover;
+	--discord-icon: none; /* discord icon */
+	--moon-icon: block; /* show moon icon */
+	--moon-icon-url: url('https://www.fantasianetwork.xyz/uploads/logos/669d7b53d3b9f1.72628476_jilhmfgqnpeok.png');
+	--moon-icon-size: auto;
 
 	/* filter uncolorable elements to fit theme */
 	/* (just set to none, they're too much work to configure) */
@@ -71,15 +86,10 @@
 	--blurple-to-accent-3-filter: none; /* add friend page school icon */
 }
 
-/* disable DM spin */
-.wrapper__8436d:hover > .childWrapper_a6ce15::before,
-.wrapper__8436d.selected_ae80f7 > .childWrapper_a6ce15::before {
-	background: var(--text-0);
-	transform: rotate(-0deg) scale(0.8);
-}
-
-/* logo for top left corner */
-.homeIcon {
-	background: url('https://www.fantasianetwork.xyz/uploads/logos/669d7b53d3b9f1.72628476_jilhmfgqnpeok.png') no-repeat center center;
+.childWrapper_f90abb:has(> svg:not(.favoriteIcon_dcc7a4)) {
+	background-image: url('https://www.fantasianetwork.xyz/uploads/logos/669d7b53d3b9f1.72628476_jilhmfgqnpeok.png');
+	background-color: transparent !important;
 	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
