@@ -13,12 +13,11 @@
 /* IMPORTANT: make sure to enable dark mode in discord settings for the theme to apply properly!!! */
 
 @import url('https://refact0r.github.io/midnight-discord/midnight.css');
-
 @import url('https://fonts.googleapis.com/css?family=Inter');
 
 /* customize things here */
 :root {
-	/* font, change to 'gg sans' for default discord font*/
+	/* font, change to 'gg sans' for default discord font */
 	--font: 'Inter';
 
 	/* top left corner text */
@@ -31,29 +30,29 @@
 
 	/* accent colors */
 	--accent-1: #7caea3; /* links */
-	--accent-2: hsl(343.6, 46.7%, 67.6%); /* general unread/mention elements */
-	--accent-3: hsl(343.6, 46.7%, 67.6%); /* accent buttons */
-	--accent-4: hsl(343.6, 46.7%, 67.6%); /* accent buttons when hovered */
-	--accent-5: hsl(343.6, 46.7%, 61.6%); /* accent buttons when clicked */
-	--mention: hsla(343.6, 46.7%, 61.6%, 0.1); /* mentions & mention messages */
-	--mention-hover: hsla(343.6, 46.7%, 61.6%, 0.05); /* mentions & mention messages when hovered */
+	--accent-2: #9b6b53; /* general unread/mention elements */
+	--accent-3: #9b6b53; /* accent buttons */
+	--accent-4: #a77a5c; /* accent buttons when hovered */
+	--accent-5: #8a5f4a; /* accent buttons when clicked */
+	--mention: rgba(155, 107, 83, 0.1); /* mentions & mention messages */
+	--mention-hover: rgba(155, 107, 83, 0.05); /* mentions & mention messages when hovered */
 
 	/* text colors */
 	--text-0: var(--bg-4); /* text on colored elements */
 	--text-1: var(--text-2); /* other normally white text */
-	--text-2: hsl(37, 40%, 84%); /* headings and important text */
-	--text-3: hsl(37, 40%, 72%); /* normal text */
-	--text-4: hsl(37, 20%, 60%); /* icon buttons and channels */
+	--text-2: #dcdcdc; /* headings and important text */
+	--text-3: #c0c0c0; /* normal text */
+	--text-4: #a9a9a9; /* icon buttons and channels */
 	--text-5: #d4be9866; /* muted channels/chats and timestamps */
 
 	/* background and dark colors */
-	--bg-1: hsl(0, 0%, 25%); /* dark buttons when clicked */
-	--bg-2: hsl(20, 5%, 22%); /* dark buttons */
-	--bg-3: hsl(10, 3%, 20%); /* spacing, secondary elements */
-	--bg-4: hsl(0, 0%, 16%); /* main background color */
+	--bg-1: #5e503f; /* dark buttons when clicked */
+	--bg-2: #4e4133; /* dark buttons */
+	--bg-3: #3e3329; /* spacing, secondary elements */
+	--bg-4: #2c2825; /* main background color */
 	--hover: rgba(160, 130, 120, 0.1); /* channels and buttons when hovered */
 	--active: rgba(160, 130, 120, 0.2); /* channels and buttons when clicked or selected */
-	--message-hover: hsla(0, 0%, 0%, 0.1); /* messages when hovered */
+	--message-hover: rgba(44, 40, 37, 0.1); /* messages when hovered */
 
 	/* amount of spacing and padding */
 	--spacing: 12px;
@@ -92,4 +91,10 @@
 .wrapper__8436d.selected_ae80f7 > .childWrapper_a6ce15::before {
 	background: var(--text-0);
 	transform: rotate(-0deg) scale(0.8);
+}
+
+/* logo for top left corner */
+.homeIcon {
+	background: url('https://www.fantasianetwork.xyz/uploads/logos/669d7b53d3b9f1.72628476_jilhmfgqnpeok.png') no-repeat center center;
+	background-size: contain;
 }
