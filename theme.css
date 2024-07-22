@@ -75,7 +75,7 @@
 	/* direct messages moon icon */
 	/* change to block to show, none to hide */
 	--discord-icon: url("https://www.fantasianetwork.xyz/uploads/logos/669d7b53d3b9f1.72628476_jilhmfgqnpeok.png");/* discord icon */
-	--moon-icon: block; /* moon icon */
+	--moon-icon: url("https://www.fantasianetwork.xyz/uploads/logos/669d7b53d3b9f1.72628476_jilhmfgqnpeok.png");
 	--moon-icon-url: url("https://www.fantasianetwork.xyz/uploads/logos/669d7b53d3b9f1.72628476_jilhmfgqnpeok.png");
 	--moon-icon-size: cover;
 
